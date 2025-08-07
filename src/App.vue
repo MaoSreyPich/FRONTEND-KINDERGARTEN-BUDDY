@@ -1,3 +1,5 @@
 <template>
-  <h1 class="bg-red-800">hello</h1>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
