@@ -116,10 +116,8 @@
         <!-- End Header -->
 
         <!-- Main Content -->
-        <n-layout-content>
-          <div class="p-4 flex-1">
+        <n-layout-content class="p-4 flex-1">
             <router-view />
-          </div>
         </n-layout-content>
         <!-- End Main Content -->
       </n-layout>
@@ -188,6 +186,7 @@ import {
   watch,
 } from "vue";
 import { useRoute } from "vue-router";
+import { RouterLink } from 'vue-router';
 
 function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon) });
@@ -241,6 +240,43 @@ export default defineComponent({
         key: "/staff",
         icon: renderIcon(PeopleIcon),
         path: "/staff",
+        children: [
+          { label: 'Creating Classroom', key: 'creating-classroom', icon: null, route: '/staff/creating-classroom' },
+          { label: 'Creating Event', key: 'creating-event', icon: null, route: '/staff-panel/creating-event' },
+          { label: 'Creating Division', key: 'creating-division', icon: null, route: '/staff-panel/creating-division' },
+          { label: 'Creating Position', key: 'creating-position', icon: null, route: '/staff-panel/creating-position' },
+          { label: 'Creating Permission', key: 'creating-permission', icon: null, route: '/staff-panel/creating-permission' },
+          { label: 'Bus Registration', key: 'bus-registration', icon: null, route: '/staff-panel/bus-registration' },
+          { label: 'Student Assignment to Bus', key: 'student-bus-assignment', icon: null, route: '/staff-panel/student-bus-assignment' },
+          { label: 'Issuing Invoice', key: 'issuing-invoice', icon: null, route: '/staff-panel/issuing-invoice' },
+          { label: 'Verifying Receipt', key: 'verifying-receipt', icon: null, route: '/staff-panel/verifying-receipt' },
+          { label: 'Register Authorised Person', key: 'register-authorised-person', icon: null, route: '/staff-panel/register-authorised-person' },
+          { label: 'Authorized Person Assignment to Student', key: 'assign-authorized-student', icon: null, route: '/staff-panel/assign-authorized-student' },
+          { label: 'Teacher Registration', key: 'teacher-registration', icon: null, route: '/staff-panel/teacher-registration' },
+          { label: 'Staff Registration', key: 'staff-registration', icon: null, route: '/staff-panel/staff-registration' },
+          { label: 'Student Registration', key: 'student-registration', icon: null, route: '/staff-panel/student-registration' },
+          { label: 'Role Creating', key: 'role-creating', icon: null, route: '/staff-panel/role-creating' },
+          { label: 'User Assignment to Role', key: 'user-role-assignment', icon: null, route: '/staff-panel/user-role-assignment' }
+        ],
+      },
+      {
+        label: "Teacher",
+        key: "/teacher",
+        icon: renderIcon(PersonIcon),
+        path: "/teacher",
+        children: [
+        { label: 'Student Performance', key: 'student-performance', icon: null, route: '/teacher-panel/student-performance' },
+        { label: 'Health Record', key: 'health-record', icon: null, route: '/teacher-panel/health-record' },
+        { label: 'Upload Class Schedule', key: 'upload-class-schedule', icon: null, route: '/teacher-panel/upload-class-schedule' },
+        { label: 'Upload Curriculum', key: 'upload-curriculum', icon: null, route: '/teacher-panel/upload-curriculum' }
+        ]
+      },
+      {
+        label: "Guardian",
+        key: "/guardian",
+        icon: renderIcon(PeopleIcon),
+        path: "/guardian",
+        route: '/guardian-list',
       },
       {
         label: "Attendance",
@@ -328,6 +364,25 @@ export default defineComponent({
     };
   },
 });
+// Theme for black border on focus/hover
+const themeOverrides = {
+  Input: {
+    borderColor: '#000000',
+    borderHover: '#000000',
+    borderFocus: '#000000',
+    boxShadowFocus: '0 0 0 1px black',
+    boxShadowHover: '0 0 0 1px black',
+    colorFocus: '#000000'
+  },
+  Select: {
+    borderColor: '#000000',
+    borderHover: '#000000',
+    borderFocus: '#000000',
+    boxShadowFocus: '0 0 0 1px black',
+    boxShadowHover: '0 0 0 1px black',
+    colorFocus: '#000000'
+  }
+}
 </script>
 <style>
 .n-layout-sider .n-layout-toggle-button {
@@ -335,5 +390,14 @@ export default defineComponent({
 }
 .n-button {
   padding: 0;
+}
+:deep(.n-input:hover .n-input__state-border),
+:deep(.n-input:focus-within .n-input__state-border),
+:deep(.n-select:hover .n-base-selection .n-base-selection__border),
+:deep(.n-select:focus-within .n-base-selection .n-base-selection__border) {
+  border-color: black !important;
+  box-shadow: 0 0 0 1px black !important;
+  border-width: 1px;
+  border-radius: 6px;
 }
 </style>
