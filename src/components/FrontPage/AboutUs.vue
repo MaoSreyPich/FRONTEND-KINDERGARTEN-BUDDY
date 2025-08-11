@@ -96,8 +96,8 @@
                 <i class="icon fas fa-solid fa-leaf"></i>
                 <span class="label">Nature Lessons</span>
               </div>
-            </div><br>
-            <div class=" p-5 ">
+            </div>
+            <div class=" p-1 ">
               <div class="class-sub flex gap-5 items-center ">
                 <i class=" icon fa-solid fa-palette"></i>
                 <span class="label">Drawing Lessons</span>

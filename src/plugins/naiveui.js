@@ -1,3 +1,4 @@
+
 import {
   create,
   NLayout,
@@ -20,6 +21,7 @@ import {
   NCard,
   NModal,
   NDataTable,
+  NMessageProvider
 } from "naive-ui";
 
 export const registerNaiveUI = () => {
@@ -45,6 +47,7 @@ export const registerNaiveUI = () => {
       NCard,
       NModal,
       NDataTable,
+      NMessageProvider
     ],
   });
 };

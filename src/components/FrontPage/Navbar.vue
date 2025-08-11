@@ -1,8 +1,8 @@
 <template>
   <nav class="Navbar">
     <div class="container">
-      <div class="flex">
-        <img src="/img/bg/Adobe Express - file.png" alt="Logo" class="logo" />
+      <div class="flex clickable" @click="goHome">
+        <img src="/img/bg/Adobe Express - file.png" alt="Logo" class="logo"  />
         <span>Kindergarten Buddy</span>
       </div>
       <div>
@@ -60,7 +60,16 @@
 </template>
 
 <script>
-export default {}
+import { useRouter } from 'vue-router'
+export default {
+  setup() {
+    const router = useRouter()
+    const goHome = () => {
+      router.push('/frontpage/home')
+    }
+    return { goHome }
+  }
+}
 </script>
 
 <style scoped>
@@ -101,6 +110,10 @@ export default {}
   height: 110px;
   width: auto;
   margin-left: 10px;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 .Navbar .container .flex span {

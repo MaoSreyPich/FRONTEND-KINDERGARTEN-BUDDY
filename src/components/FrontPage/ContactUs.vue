@@ -14,7 +14,7 @@
     </section>
     <div class="text-wrapper">
 
-        <h2 class="main-title push-text"><b>Contact Us</b></h2>
+        <h2 class="main-title push-text">Contact Us</h2>
     </div>
     <section class="cer-section">
         <div class="cer-text">
@@ -51,8 +51,10 @@
             </div>
         </div>
     </section>
+
+
 <div class="w-full flex justify-center map-location">
-  <div class="w-full md:w-[600px] h-[300px] rounded-lg overflow-hidden shadow-lg">
+  <div class="w-full md:w-[10000px] h-[300px] rounded-lg overflow-hidden shadow-lg">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.768536219511!2d104.87052240000001!3d11.568443999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951a7262868f1%3A0xb49d99e613207b4!2sLSi%20Business%20School!5e0!3m2!1sen!2skh!4v1754279053122!5m2!1sen!2skh"
       width="100%"
@@ -64,10 +66,6 @@
     </iframe>
   </div>
 </div>
-
-
-
-
 
 
     <EnrollFooter />
@@ -230,7 +228,7 @@ export default {
 }
 
 .cer-image img {
-    width: 450px;
+    width: 550px;
     height: 400px;
     border-radius: 1rem;
 }
@@ -247,18 +245,18 @@ export default {
 
 .main-title-cer {
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .class-sub .icon {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .class-sub .label {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #ffffff;
 }

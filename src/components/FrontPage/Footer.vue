@@ -4,14 +4,12 @@
 
       <!-- Logo & School Name -->
       <div class="flex flex-col items-center">
-  <img 
-    src="/img/bg/Adobe Express - file.png" 
-    alt="Kindergarten Buddy Logo" 
-    class="w-[100px] h-auto object-contain" 
-  />
-
- 
-</div>
+        <img 
+          src="/img/bg/Adobe Express - file.png" 
+          alt="Kindergarten Buddy Logo" 
+          class="w-[200px] h-auto object-contain" 
+        />
+      </div>
 
 
       <!-- About Us -->

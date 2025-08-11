@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+  <n-message-provider>
+    <router-view />
+  </n-message-provider>
 </template>
